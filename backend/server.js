@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const connectDB = require("./config/db");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
@@ -12,6 +13,16 @@ connectDB();
 const app = express();
 
 app.use(express.json()); // to accept json data
+
+// Enable CORS for frontend URLs
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://grovechat.netlify.app",
+    "https://talking-wolf.onrender.com"
+  ],
+  credentials: true,
+}));
 
 // app.get("/", (req, res) => {
 //   res.send("API Running!");
