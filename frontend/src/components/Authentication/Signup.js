@@ -50,9 +50,8 @@ const Signup = () => {
           "Content-type": "application/json",
         },
       };
-      const API_URL = process.env.REACT_APP_API_URL;
       const { data } = await axios.post(
-        `${API_URL}/api/user`,
+        "/api/user",
         {
           name,
           email,

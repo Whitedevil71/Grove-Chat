@@ -34,8 +34,13 @@ function Homepage() {
         borderRadius="lg"
         borderWidth="1px"
       >
+        <img
+  src={`${process.env.PUBLIC_URL}/FAVICON.png`}
+  alt="Grove Chat"
+  style={{ width: "32px", height: "32px", marginRight: "8px" }}
+/>
         <Text fontSize="4xl" fontFamily="Work sans">
-          Talking_WOLF
+          Grove Chat
         </Text>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
