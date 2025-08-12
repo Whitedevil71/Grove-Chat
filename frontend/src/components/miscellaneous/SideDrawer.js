@@ -77,7 +77,8 @@ function SideDrawer() {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const API_URL = process.env.REACT_APP_API_URL;
+      const { data } = await axios.get(`${API_URL}/api/user?search=${search}`, config);
 
       setLoading(false);
       setSearchResult(data);
@@ -104,7 +105,8 @@ function SideDrawer() {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post(`/api/chat`, { userId }, config);
+      const API_URL = process.env.REACT_APP_API_URL;
+      const { data } = await axios.post(`${API_URL}/api/chat`, { userId }, config);
 
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
       setSelectedChat(data);
@@ -141,12 +143,8 @@ function SideDrawer() {
             </Text>
           </Button>
         </Tooltip>
-        <Box display="flex" alignItems="center" justifyContent="center">
-          <img 
-            src={`${process.env.PUBLIC_URL}/FAVICON.png`} 
-            alt="Grove Chat" 
-            style={{ width: "35px", height: "35px", marginRight: "8px", borderRadius: "6px" }}
-          />
+        <Box display="flex" alignItems="center">
+          <img src={`${process.env.PUBLIC_URL}/FAVICON.png`} alt="Grove Chat" style={{ width: "35px", height: "35px", marginRight: "4px", borderRadius: "6px" }}/>
           <Text fontSize="2xl" fontFamily="Work sans">
             Grove Chat
           </Text>

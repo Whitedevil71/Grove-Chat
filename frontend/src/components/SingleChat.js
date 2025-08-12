@@ -2,7 +2,6 @@ import { FormControl } from "@chakra-ui/form-control";
 import { Input } from "@chakra-ui/input";
 import { Box, Text } from "@chakra-ui/layout";
 import "./styles.css";
-import { useColorMode } from "@chakra-ui/react";
 import { IconButton, Spinner, useToast } from "@chakra-ui/react";
 import { getSender, getSenderFull } from "../config/ChatLogics";
 import { useEffect, useState } from "react";
@@ -20,7 +19,6 @@ const ENDPOINT = "https://talking-wolf.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
-  const { colorMode } = useColorMode();
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [newMessage, setNewMessage] = useState("");
@@ -52,8 +50,9 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
       setLoading(true);
 
+      const API_URL = process.env.REACT_APP_API_URL;
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `${API_URL}/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -83,8 +82,9 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           },
         };
         setNewMessage("");
+        const API_URL = process.env.REACT_APP_API_URL;
         const { data } = await axios.post(
-          "/api/message",
+          `${API_URL}/api/message`,
           {
             content: newMessage,
             chatId: selectedChat,

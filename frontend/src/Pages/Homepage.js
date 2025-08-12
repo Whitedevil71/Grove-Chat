@@ -34,11 +34,11 @@ function Homepage() {
         borderRadius="lg"
         borderWidth="1px"
       >
-        <img
-  src={`${process.env.PUBLIC_URL}/FAVICON.png`}
-  alt="Grove Chat"
-  style={{ width: "32px", height: "32px", marginRight: "8px" }}
-/>
+        {/* <img
+          src={`${process.env.PUBLIC_URL}/FAVICON.png`}
+          alt="Grove Chat"
+          style={{ width: "2px", height: "2px", marginRight: "8px" }}
+        /> */}
         <Text fontSize="4xl" fontFamily="Work sans">
           Grove Chat
         </Text>
