@@ -184,6 +184,7 @@ const Signup = () => {
           p={1.5}
           accept="image/*"
           onChange={(e) => postDetails(e.target.files[0])}
+          required
         />
       </FormControl>
       <Button

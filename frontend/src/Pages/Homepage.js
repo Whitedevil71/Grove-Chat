@@ -26,6 +26,8 @@ function Homepage() {
     <Container maxW="xl" centerContent>
       <Box
         d="flex"
+        flexDirection="column"
+        alignItems="center"
         justifyContent="center"
         p={3}
         bg="white"
@@ -34,11 +36,11 @@ function Homepage() {
         borderRadius="lg"
         borderWidth="1px"
       >
-        {/* <img
+        <img
           src={`${process.env.PUBLIC_URL}/FAVICON.png`}
           alt="Grove Chat"
-          style={{ width: "2px", height: "2px", marginRight: "8px" }}
-        /> */}
+          style={{ width: "75px", height: "75px", marginBottom: "12px", borderRadius: "8px" }}
+        />
         <Text fontSize="4xl" fontFamily="Work sans">
           Grove Chat
         </Text>
