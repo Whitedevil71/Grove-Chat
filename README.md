@@ -1,50 +1,42 @@
+# 💬 Grove Chat – MERN Real-Time Chat App
 
-# Talking_WOLF
+**Grove Chat** is a real-time chat application built using the MERN stack. It allows users to send and receive messages instantly, manage personal and group chats, upload profile pictures, and enjoy a clean, responsive UI — all with secure authentication and scalable performance.
 
-Talking_WOLF is a Full Stack Chatting App.
-Uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database.
-## Tech Stack
+---
 
-**Client:** React JS
+## 🚀 Features
 
-**Server:** Node JS, Express JS
+- ⚡ **Real-Time Messaging**  
+  Instantly send and receive messages using Socket.io with support for 100+ concurrent users.
 
-**Database:** Mongo DB
-  
-## Demo
+- 🔐 **User Authentication**  
+  Secure signup and login using JWT tokens with protected API routes.
 
+- 👥 **Private & Group Chats**  
+  Search for users, initiate personal chats, and create group conversations for collaborative communication.
 
-## Run Locally
+- 🖼️ **Profile Picture Upload**  
+  Upload and store user avatars via Cloudinary for personalized profiles.
 
-Clone the project
+- 🎨 **Responsive UI**  
+  Built with Chakra UI to deliver a consistent and accessible experience across devices.
 
-Go to the project directory
+---
 
-```bash
-  cd mern-chat-app
-```
+## 🛠️ Tech Stack
 
-Install dependencies
+- **Frontend**: React.js, Chakra UI  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB (Mongoose)  
+- **Real-Time Communication**: Socket.io  
+- **Authentication**: JWT  
+- **Media Storage**: Cloudinary  
 
-```bash
-  npm install
-```
+---
 
-```bash
-  cd frontend/
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run start
-```
-Start the Client
+## 🔧 Setup & Installation
 
 ```bash
-  //open now terminal
-  cd frontend
-  npm start
-```
-
+# Clone the repository
+git clone https://github.com/Whitedevil71/Grove-Chat.git
+cd grove-chat
